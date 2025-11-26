@@ -9,12 +9,6 @@ Description: >-
 
 
 Parameters:
-# KeyPair Parameter
-  KeyName:
-    Type: String
-    Description: Name of the KeyPair used for EC2 instances
-    Default: ws-default-keypair
-    ConstraintDescription: 'Must be the name of an existing EC2 KeyPair.'
 
 # Management Network CIDR
   RemoteManagementCIDR:
