@@ -8,12 +8,6 @@ Description: >-
 # ======================================================================================================================
 
 Parameters:
-# KeyPair Parameter
-  KeyName:
-    Type: String
-    Description: Name of the KeyPair used for EC2 instances
-    ConstraintDescription: 'Must be the name of an existing EC2 KeyPair.'
-    Default: lab-key-pair
 
 # Naming Prefix
   FrontendNamePrefix:
