@@ -407,7 +407,6 @@ Resources:
     Properties:
       ImageId: !Ref LatestAmiId  # Enter the appropriate AMI ID
       InstanceType: t2.micro  # Enter the desired instance type
-      KeyName: !Ref KeyName  #!Join ['', [!FindInMap [KeyPairMap, qwikLABS, KeyNamePrefix], !Ref 'AWS::AccountId']]
       IamInstanceProfile: !Ref FrontendSsmInstanceProfile
       NetworkInterfaces:
         - PrivateIpAddress: 10.1.2.223
