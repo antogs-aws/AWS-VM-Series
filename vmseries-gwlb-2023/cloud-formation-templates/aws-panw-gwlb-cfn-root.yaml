@@ -317,7 +317,6 @@ Resources:
     Properties:
       TemplateURL: !Sub 'https://${SourceS3BucketName}.s3.amazonaws.com/${SourceS3BucketPath}/${SecurityCftTemplateName}'
       Parameters:
-        KeyName: !Ref KeyName
         RemoteManagementCIDR: !Ref RemoteManagementCIDR
         SecurityVPCCIDR: !Ref SecurityVPCCIDR
         SecurityVPCNATGWSubnetCIDRAZ1: !Ref SecurityVPCNATGWSubnetCIDRAZ1
@@ -338,7 +337,6 @@ Resources:
     Properties:
       TemplateURL: !Sub 'https://${SourceS3BucketName}.s3.amazonaws.com/${SourceS3BucketPath}/${VmSeriesCftTemplateName}'
       Parameters:
-        KeyName: !Ref KeyName
         RemoteManagementCIDR: !Ref RemoteManagementCIDR
         SourceS3BucketName: !Ref SourceS3BucketName
         SourceS3BucketPath: !Ref SourceS3BucketPath
@@ -353,7 +351,6 @@ Resources:
     Properties:
       TemplateURL: !Sub 'https://${SourceS3BucketName}.s3.amazonaws.com/${SourceS3BucketPath}/${FrontendCftTemplateName}'
       Parameters:
-        KeyName: !Ref KeyName
         RemoteManagementCIDR: !Ref RemoteManagementCIDR
         FrontendVPCCIDR: !Ref FrontendVPCCIDR
         FrontendVPCSubnetPrivateCIDRAZ1: !Ref FrontendVPCSubnetPrivateCIDRAZ1
@@ -379,6 +376,4 @@ Resources:
 
 Outputs:
 
-  KeyName:
-    Description: The SSH KeyPair Name
-    Value: !Ref KeyName
+  
