@@ -718,7 +718,6 @@ Resources:
     Properties:
       ImageId: !Ref LatestAmiId  # Enter the appropriate AMI ID
       InstanceType: t2.micro  # Enter the desired instance type
-      KeyName: !Ref KeyName  #!Join ['', [!FindInMap [KeyPairMap, qwikLABS, KeyNamePrefix], !Ref 'AWS::AccountId']]
       IamInstanceProfile: !Ref DataSsmInstanceProfile
       NetworkInterfaces:
         - PrivateIpAddress: 10.2.1.100 # Enter the desired private IP address
@@ -996,7 +995,6 @@ Resources:
     Properties:
       ImageId: !Ref LatestAmiId  # Enter the appropriate AMI ID
       InstanceType: t2.micro  # Enter the desired instance type
-      KeyName: !Ref KeyName  #!Join ['', [!FindInMap [KeyPairMap, qwikLABS, KeyNamePrefix], !Ref 'AWS::AccountId']]
       IamInstanceProfile: !Ref AttackerSsmInstanceProfile
       NetworkInterfaces:
         - PrivateIpAddress: 192.168.10.10 # Enter the desired private IP address
