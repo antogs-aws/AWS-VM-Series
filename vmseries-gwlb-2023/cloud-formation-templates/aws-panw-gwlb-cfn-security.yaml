@@ -122,7 +122,6 @@ Metadata:
         Parameters:
           - VMSeriesAMI
           - VMSeriesInstanceType
-          - KeyName
           - SourceS3BucketName
           - SourceS3BucketPath
 
@@ -634,10 +633,6 @@ Outputs:
     Value: !GetAtt GWLBESerivceName.Data
     Export:
       Name: GWLBServiceId
-
-  KeyName:
-    Description: The SSH KeyPair Name
-    Value: !Ref KeyName
 
   TgwId:
     Description: The ID of the Transit Gateway
