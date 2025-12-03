@@ -218,7 +218,6 @@ Metadata:
         Label:
           default: "Shared Parameters"
         Parameters:
-          - KeyName
           - SourceS3BucketName
           - SourceS3BucketPath
       -
