@@ -645,6 +645,7 @@ Resources:
 
   DataPrivateDefaultRoute:
     Type: AWS::EC2::Route
+    DependsOn: DataIGWAttachment
     Properties:
       RouteTableId: !Ref DataPrivateRouteTable
       DestinationCidrBlock: 0.0.0.0/0
